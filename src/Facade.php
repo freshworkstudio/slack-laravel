@@ -2,6 +2,8 @@
 
 namespace Maknz\Slack\Laravel;
 
+use Maknz\Slack\Client as Client;
+
 class Facade extends \Illuminate\Support\Facades\Facade
 {
     /**
@@ -11,6 +13,6 @@ class Facade extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'maknz.slack';
+        return Client::class;
     }
 }
